@@ -1,0 +1,155 @@
+   <!DOCTYPE html>
+   <html lang="en">
+   <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS BIBLE</title>
+   </head>
+
+   <style>
+    html {
+      font-size: calc(100vw / 1440 * 10);
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    }
+    nav {
+      margin: 2rem 0 10rem 4rem;
+    }
+    .nav-link {
+      color: #666481;
+      font-weight: 900;
+      font-size: 2.4rem;
+      line-height: 3.2rem;
+      margin-right: 3.2rem;
+      cursor: pointer;
+    }
+    .active {
+      color: #EA445A;
+      font-weight: 700;
+      border-top: 0.1rem solid #EA445A;
+      border-left: 0.1rem solid #EA445A;
+      border-right: 0.1rem solid #EA445A;
+      padding: 0.5rem 1rem;
+    }
+   </style>
+
+   <body>
+
+    <nav>
+      <span class="nav-link active">Home</span>
+      <span class="nav-link ">About</span>
+      <span class="nav-link ">Contact</span>
+      <span class="nav-link ">Register</span>
+      <span class="nav-link ">Login</span>
+    </nav>
+    <p>
+      <!-- // useEffect(() => {
+         //   getConnectedWallet()
+         //   walletListener()
+         // })
+         // const connectwallet = async() => {
+         //   if(typeof window != "undefined" && typeof window.ethereum != "undefined") {
+         //     try {
+         //       // Check if metamask was installed
+         //       const accounts = await window.ethereum.request({ method: "eth_requestAccounts" });
+         //       setWalletAddress(accounts[0])
+         //       console.log(accounts[0]);
+         //     } catch(err) {
+         //       console.error(err.message)
+         //     }
+         //   } else {
+         //     // Metamask is not installed
+         //     console.log("Please install Metamask")
+         //   }
+         // }
+       
+         // // To stay connected on refresh
+         // const getConnectedWallet = async() => {
+         //   if(typeof window != "undefined" && typeof window.ethereum != "undefined") {
+         //     try {
+         //       // Check if metamask was installed
+         //       const accounts = await window.ethereum.request({
+         //         method: "eth_accounts"
+         //       });
+         //       if (accounts.length > 0) {
+         //         setWalletAddress(accounts[0])
+         //         console.log(accounts[0]);
+         //       } else {
+         //         console.log("Please connect to metamask")
+         //       }
+         //     } catch(err) {
+         //       console.error(err.message)
+         //     }
+         //   } else {
+         //     // Metamask is not installed
+         //     console.log("Please install Metamask")
+         //   }
+         // }
+       
+         // // To visibly disconnect when disconnected
+         // const walletListener = async() => {
+         //   if(typeof window != "undefined" && typeof window.ethereum != "undefined") {
+         //    window.ethereum.on("accountsChanged", (accounts) => {
+         //     setWalletAddress(accounts[0]);
+         //     console.log(accounts[0])
+         //    });
+         //   } else {
+         //     // Metamask is not installed
+         //     setWalletAddress(" ");
+         //     console.log("Please install Metamask")
+         //   }
+         // }; -->
+    </p>
+
+    <div>
+      <div style="margin-bottom: 3rem;">
+        <button style="margin-right: 2rem;" onclick="console.dir(this);">
+          My Button
+        </button>
+        <button onclick="console.dir(this.innerText);">
+          My Button
+        </button>
+      </div>
+      <div style="margin-bottom: 3rem;">
+        <button style="margin-right: 2rem;" onclick="console.log(this);">
+          This Button
+        </button>
+        <button onclick="console.log(this.textContent);">
+          This Button
+        </button>
+      </div>
+  
+      <div style="margin-bottom: 3rem;">
+        <button style="margin-right: 2rem;" style="cursor: pointer;" onclick="setBgRed()">
+          Change Bg
+        </button>
+        <button style="cursor: pointer;" onclick="restoreBg()">
+          Restore Bg
+        </button>
+      </div>
+
+      <div style="margin-bottom: 3rem;">
+        <button style="margin-right: 2rem;" style="cursor: pointer;" onclick="findRandom()">
+          Random number
+        </button>
+      </div>
+
+
+    </div>
+
+    <input style="height: 1.5rem;" onchange="console.log(this.value);" type="text" name="" id="" />
+    <input style="height: 1.5rem;" onchange="console.dir(this);" type="text" name="" id="" />
+   </body>
+
+   <script src="./js/index.js"></script>
+   <script src="./js/advancedTopics.js"></script>
+   <script src="./js/arrays.js"></script>
+   <script src="./js/destructuring.js"></script>
+   <script src="./js/functions.js"></script>
+   <script src="./js/literals.js"></script>
+   <script src="./js/loops.js"></script>
+   <script src="./js/objects.js"></script>
+   <script src="./js/types.js"></script>
+   <script src="./js/variableLifeCycles.js"></script>
+   <script src="./js/variables.js"></script>
+   </html>
+   

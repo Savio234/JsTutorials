@@ -1,0 +1,213 @@
+const navItems = document.querySelectorAll('.nav-link');
+console.log(navItems);
+const navItemsLength = navItems.length
+for (let i = 0; i < navItemsLength; i++) {
+    const navItem = navItems[i]
+    console.log(navItem, navItem.outerText, navItem.outerHTML, );
+    navItem.onclick = function() {
+        for (let j = 0; j < navItemsLength; j++) {
+            navItems[j].classList.remove('active')
+        }
+        navItem.classList.add('active')
+        console.log(navItem.innerHTML);
+    }
+}
+
+// navItems.forEach(navItem => {
+//     navItem.addEventListener('click', function() {
+//         if (navItem.classList.contains('active')) {
+//             navItem.classList.remove('active')
+//         } else {
+//             navItem.classList.add('active')
+//         }
+//     })
+// })
+
+
+
+
+let d = 9
+console.log(++d); // 10
+console.log(d++); // 10
+console.log(d); // 11
+
+
+
+
+// EXPRESSION && STATEMENT IN JAVASCRIPT
+
+// Expression in Javascript returns a value. 
+// Expression with side effects are expressions that return a value and also perform an action
+
+// /* STATEMENTS */
+// Statements produces or performs an action
+
+
+
+// Using the spread notation
+function namegetam(...sums) {
+    console.log(sums);
+    // return sums.reduce((a, b) => a + b)
+    return sums
+}
+console.log(namegetam(3, 4, 5, 6, 7, 8, 9, 10))
+const inventory = [
+    {name: 'apples', quantity: 2},
+    {name: 'cherries', quantity: 8},
+    {name: 'bananas', quantity: 0},
+    {name: 'cherries', quantity: 5},
+    {name: 'cherries', quantity: 15}
+];
+  
+const result = inventory.find( ({ name }) => name === 'cherries' );
+console.log(result);
+
+const pets = ['cat', 'dog', 'bat'];
+
+console.log(pets.includes('cat'));
+const str = 'To be, or not to be, that is the question.' 
+
+console.log(str.includes('To be'))        // true
+console.log(str.includes('question'))     // true
+console.log(str.includes('nonexistent'))  // false
+console.log(str.includes('To be', 1))     // false
+console.log(str.includes('TO BE'))        // false
+console.log(str.includes(''))
+
+const numArray = [2, 9, 22, 30, 'abc', true, false, {a: 10, b: true}]
+numArray.sort((a, b) => a - b); 
+
+const words = ['spray', 'limit', 'elite', 'exuberant', 'destruction', 'present'];
+
+const results = words.filter(word => word.length < 6);
+
+console.log(results);
+
+let numbers = [1, 2, 3, 42, 3, 2, 4, -1];
+
+let allPassed = numbers.every(function(element){
+	return element > 0;
+});
+console.log(allPassed);
+
+function isodd(element, index, array) {
+    return element % 2 == 1;
+}
+
+function func() {
+    var arr = [56, 91, 18, 88, 12];
+    var value = arr.every(isodd);
+    return document.write(value);
+}
+console.log(func());
+
+const ages= [21,12,17,7,2];
+ages.push(30, 'abc', true, 'undefined', {a: 20, b: 'Angie'})
+console.log(ages);
+console.log(ages.pop(), 'New List', ages);
+const sortedList = ages.sort((a, b) => b - a)
+console.log(sortedList);
+console.log(ages.some((person)=> person > 18))
+
+
+// Using anonymous functions as callback functions
+setTimeout(function() {
+    console.log('This text was delayed for 12 secs');
+}, 12000)
+let l = 1
+const intervalTime = setInterval(() => {
+    console.log('Prints every 2 secs ' + l);
+    l++;
+}, 2000)
+setTimeout(() => {
+    clearInterval(intervalTime)
+    console.log('Interval has been cleared after 10 secs');
+}, 10500)
+console.log(typeof intervalTime, typeof ages, typeof numbers, typeof numArray, typeof mikeObject);
+
+const aString = 'Come out'
+const aNewString = new String('A New String')
+console.log(aString instanceof String, aNewString instanceof String);
+console.log(aString instanceof Object, aNewString instanceof Object);
+
+const anIIFE = (function (a, b) {
+    return a + b
+}(20, 5))
+console.log(anIIFE);
+
+const thisObject = {
+    name: 'Alice',
+    age: 28,
+    greeting: function() {
+        return this
+    }
+}
+console.log(thisObject.greeting());
+
+console.log(ages[3]);
+for ( let i = 0; i < 16; i++) {
+    console.log(`Hello Mothefuckers! ${i}`);
+}
+
+function setBgRed() {
+    document.body.style.backgroundColor = 'red'
+}
+function restoreBg() {
+    document.body.style.backgroundColor = 'white'
+}
+
+function maxNumber(a, b) {
+    if (a > b) {
+        return a
+    } else {
+        return b
+    }
+}
+console.log(maxNumber(2, 60));
+
+// Using the 'CALL', 'APPLY' and 'BIND' method for function
+const thisObject2 = {
+    name: 'Alice Wonder',
+    age: 38,
+    city: 'New York',
+    info() {
+        return `${this.name} is ${this.age} years old and lives in ${this.city}`
+    }
+}
+const thisObject3 = {
+    name: 'Bob Ziroll',
+    age: 34,
+    city: 'Paris',
+}
+function myfunction1() {
+    return this
+}
+console.log(myfunction1());
+console.log(myfunction1.call(thisObject2));
+
+function myfunction2(a, b) {
+    console.log(a + b, this);
+}
+console.log(myfunction2(10, 3));
+console.log(myfunction2.call(thisObject, 10, 30));
+console.log(myfunction2.apply(thisObject, [10, 300]));
+
+console.log(thisObject2.info());
+console.log(thisObject2.info.call(thisObject3));
+
+function myfunction3(a, b, c) {
+    let sum = a + b + c
+
+    for (let key in this) {
+        if (typeof this[key] === 'number') {
+            sum += this[key]
+        }
+    }
+
+    return sum
+}
+console.log(myfunction3.call(thisObject, 10, 30, 40));
+console.log(myfunction3.apply(thisObject, [10, 300, 4]));
+
+
+// ARROW FUNCTIONS
