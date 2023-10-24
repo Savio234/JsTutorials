@@ -51,3 +51,14 @@ console.log(str.includes(''))
 
 const pets = ['cat', 'dog', 'bat'];
 console.log(pets.includes('cat'));
+
+// .find()
+const inventory = [
+    {name: 'apples', quantity: 2},
+    {name: 'cherries', quantity: 8},
+    {name: 'bananas', quantity: 0},
+    {name: 'cherries', quantity: 5},
+    {name: 'cherries', quantity: 15}
+];
+const result = inventory.find( ({ name }) => name === 'cherries' );
+console.log(result);

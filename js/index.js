@@ -51,16 +51,6 @@ function namegetam(...sums) {
     return sums
 }
 console.log(namegetam(3, 4, 5, 6, 7, 8, 9, 10))
-const inventory = [
-    {name: 'apples', quantity: 2},
-    {name: 'cherries', quantity: 8},
-    {name: 'bananas', quantity: 0},
-    {name: 'cherries', quantity: 5},
-    {name: 'cherries', quantity: 15}
-];
-  
-const result = inventory.find( ({ name }) => name === 'cherries' );
-console.log(result);
 
 
 const numArray = [2, 9, 22, 30, 'abc', true, false, {a: 10, b: true}]
