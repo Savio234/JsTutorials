@@ -62,26 +62,10 @@ const inventory = [
 const result = inventory.find( ({ name }) => name === 'cherries' );
 console.log(result);
 
-const pets = ['cat', 'dog', 'bat'];
-
-console.log(pets.includes('cat'));
-const str = 'To be, or not to be, that is the question.' 
-
-console.log(str.includes('To be'))        // true
-console.log(str.includes('question'))     // true
-console.log(str.includes('nonexistent'))  // false
-console.log(str.includes('To be', 1))     // false
-console.log(str.includes('TO BE'))        // false
-console.log(str.includes(''))
 
 const numArray = [2, 9, 22, 30, 'abc', true, false, {a: 10, b: true}]
 numArray.sort((a, b) => a - b); 
 
-const words = ['spray', 'limit', 'elite', 'exuberant', 'destruction', 'present'];
-
-const results = words.filter(word => word.length < 6);
-
-console.log(results);
 
 let numbers = [1, 2, 3, 42, 3, 2, 4, -1];
 
@@ -94,12 +78,12 @@ function isodd(element, index, array) {
     return element % 2 == 1;
 }
 
-function func() {
+function getOddNum() {
     var arr = [56, 91, 18, 88, 12];
     var value = arr.every(isodd);
     return document.write(value);
 }
-console.log(func());
+console.log(getOddNum());
 
 const ages= [21,12,17,7,2];
 ages.push(30, 'abc', true, 'undefined', {a: 20, b: 'Angie'})
@@ -111,29 +95,12 @@ console.log(ages.some((person)=> person > 18))
 
 
 // Using anonymous functions as callback functions
-setTimeout(function() {
-    console.log('This text was delayed for 12 secs');
-}, 12000)
-let l = 1
-const intervalTime = setInterval(() => {
-    console.log('Prints every 2 secs ' + l);
-    l++;
-}, 2000)
-setTimeout(() => {
-    clearInterval(intervalTime)
-    console.log('Interval has been cleared after 10 secs');
-}, 10500)
-console.log(typeof intervalTime, typeof ages, typeof numbers, typeof numArray, typeof mikeObject);
 
 const aString = 'Come out'
 const aNewString = new String('A New String')
 console.log(aString instanceof String, aNewString instanceof String);
 console.log(aString instanceof Object, aNewString instanceof Object);
 
-const anIIFE = (function (a, b) {
-    return a + b
-}(20, 5))
-console.log(anIIFE);
 
 const thisObject = {
     name: 'Alice',
@@ -145,9 +112,6 @@ const thisObject = {
 console.log(thisObject.greeting());
 
 console.log(ages[3]);
-for ( let i = 0; i < 16; i++) {
-    console.log(`Hello Mothefuckers! ${i}`);
-}
 
 function setBgRed() {
     document.body.style.backgroundColor = 'red'
@@ -208,6 +172,3 @@ function myfunction3(a, b, c) {
 }
 console.log(myfunction3.call(thisObject, 10, 30, 40));
 console.log(myfunction3.apply(thisObject, [10, 300, 4]));
-
-
-// ARROW FUNCTIONS

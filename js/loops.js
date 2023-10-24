@@ -10,6 +10,9 @@
     for (let i = 0; i < 41; i++) {
         console.log(i);
     }
+    for ( let i = 0; i < 16; i++) {
+        console.log(`Hello Mothefuckers! ${i}`);
+    }
 
 
 

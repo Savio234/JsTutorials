@@ -83,7 +83,21 @@ mult(5, 64, 'abc') //logs NaN multiplication of anything other than numbers resu
 mult('abc', 'def', 'ghi');
 
 // ANONYMOUS FUNCTIONS
-
+// They are either used as callbacks or stored in a variable 
+// Because they cannot be used as standalone like the ideal functions
+setTimeout(function() {
+    console.log('This text was delayed for 12 secs');
+}, 12000)
+let l = 1
+const intervalTime = setInterval(() => {
+    console.log('Prints every 2 secs ' + l);
+    l++;
+}, 2000)
+setTimeout(() => {
+    clearInterval(intervalTime)
+    console.log('Interval has been cleared after 10 secs');
+}, 10500)
+console.log(typeof intervalTime, typeof ages, typeof numbers, typeof numArray, typeof mikeObject);
 
 // IIFE
 ;(function() {
@@ -92,6 +106,10 @@ mult('abc', 'def', 'ghi');
 ;(function(a) {
     console.log(a);
 })(12);
+const anIIFE = (function (a, b) {
+    return a + b
+}(20, 5))
+console.log(anIIFE);
 
 
 // ARROW FUNCTIONS
