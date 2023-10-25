@@ -3,7 +3,7 @@ console.log(navItems);
 const navItemsLength = navItems.length
 for (let i = 0; i < navItemsLength; i++) {
     const navItem = navItems[i]
-    console.log(navItem, navItem.outerText, navItem.outerHTML, );
+    console.log(navItem, navItem.outerText, navItem.outerHTML);
     navItem.onclick = function() {
         for (let j = 0; j < navItemsLength; j++) {
             navItems[j].classList.remove('active')
@@ -52,11 +52,6 @@ function namegetam(...sums) {
 }
 console.log(namegetam(3, 4, 5, 6, 7, 8, 9, 10))
 
-
-const numArray = [2, 9, 22, 30, 'abc', true, false, {a: 10, b: true}]
-numArray.sort((a, b) => a - b); 
-
-
 let numbers = [1, 2, 3, 42, 3, 2, 4, -1];
 
 let allPassed = numbers.every(function(element){
@@ -75,21 +70,9 @@ function getOddNum() {
 }
 console.log(getOddNum());
 
-const ages= [21,12,17,7,2];
-ages.push(30, 'abc', true, 'undefined', {a: 20, b: 'Angie'})
-console.log(ages);
-console.log(ages.pop(), 'New List', ages);
 const sortedList = ages.sort((a, b) => b - a)
 console.log(sortedList);
 console.log(ages.some((person)=> person > 18))
-
-
-// Using anonymous functions as callback functions
-
-const aString = 'Come out'
-const aNewString = new String('A New String')
-console.log(aString instanceof String, aNewString instanceof String);
-console.log(aString instanceof Object, aNewString instanceof Object);
 
 
 const thisObject = {

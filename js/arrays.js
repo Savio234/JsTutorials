@@ -62,3 +62,16 @@ const inventory = [
 ];
 const result = inventory.find( ({ name }) => name === 'cherries' );
 console.log(result);
+
+// .sort()
+const numArray = [2, 9, 22, 30, 'abc', true, false, {a: 10, b: true}]
+numArray.sort((a, b) => a - b);
+
+// .push()
+const ages= [21,12,17,7,2];
+ages.push(30, 'abc', true, 'undefined', {a: 20, b: 'Angie'})
+console.log(ages);
+
+// .pop()
+const copyOfAgesArray= [21,12,17,7,2];
+console.log(copyOfAgesArray.pop(), 'New Array', copyOfAgesArray);

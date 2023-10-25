@@ -1,4 +1,4 @@
-// NAMED FUNCTIONS
+// /* NAMED FUNCTIONS */
 function factorial(n) {
     if (n <= 1) {
         return n
@@ -18,7 +18,7 @@ function recursiveSum(n) {
 }
 console.log(recursiveSum(100));
 
-function myFunc(a, b,c) {
+function myFunc(a, b, c) {
     console.log(a);
     console.log(b);
     console.log(c);
@@ -50,7 +50,8 @@ function myReturn(a) {
 }
 myReturn(10)
 console.log(myReturn(5));
-// A function execution immediately stops after the return statement, hence everything after return is unreachable
+// A function execution immediately stops after the return statement
+// Hence everything after return is unreachable
 
 let z = 15
 function f1() {
@@ -82,7 +83,7 @@ mult() //NaN cause since no arguments, parameters will be automatically 'undefin
 mult(5, 64, 'abc') //logs NaN multiplication of anything other than numbers results in NaN
 mult('abc', 'def', 'ghi');
 
-// ANONYMOUS FUNCTIONS
+// /* ANONYMOUS FUNCTIONS */
 // They are either used as callbacks or stored in a variable 
 // Because they cannot be used as standalone like the ideal functions
 setTimeout(function() {
@@ -99,7 +100,7 @@ setTimeout(() => {
 }, 10500)
 console.log(typeof intervalTime, typeof ages, typeof numbers, typeof numArray, typeof mikeObject);
 
-// IIFE
+// /* IIFE: Immediately Invoked Function Expression */
 ;(function() {
     console.log('This is an IIFE. Immediately Invoked Function Expression');
 })()
@@ -112,7 +113,7 @@ const anIIFE = (function (a, b) {
 console.log(anIIFE);
 
 
-// ARROW FUNCTIONS
+// /* ARROW FUNCTIONS */
 // ARROW FUNCTIONS SYNTAXs
 
 (a, b) => a + b; //arrow function has an implicit return statement
