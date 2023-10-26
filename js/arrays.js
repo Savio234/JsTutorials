@@ -66,6 +66,10 @@ console.log(result);
 // .sort()
 const numArray = [2, 9, 22, 30, 'abc', true, false, {a: 10, b: true}]
 numArray.sort((a, b) => a - b);
+const numbersArray = [21,12,17,7,2];
+const sortedList = numbersArray.sort((a, b) => b - a)
+const reverseSortedList = numArray.sort((a, b) => b - a)
+console.log(sortedList, reverseSortedList);
 
 // .push()
 const ages= [21,12,17,7,2];
@@ -75,3 +79,13 @@ console.log(ages);
 // .pop()
 const copyOfAgesArray= [21,12,17,7,2];
 console.log(copyOfAgesArray.pop(), 'New Array', copyOfAgesArray);
+
+// .some()
+console.log(numbersArray.some((person)=> person > 18))
+
+// .every()
+const numbers = [1, 2, 3, 42, 3, 2, 4, -1];
+const allPassed = numbers.every(function(element){
+	return element > 0;
+});
+console.log(allPassed);

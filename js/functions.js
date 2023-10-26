@@ -83,14 +83,71 @@ mult() //NaN cause since no arguments, parameters will be automatically 'undefin
 mult(5, 64, 'abc') //logs NaN multiplication of anything other than numbers results in NaN
 mult('abc', 'def', 'ghi');
 
+function thisTest() {
+    'use strict'
+    return this
+}
+console.log(thisTest(), window.thisTest());
+
 // METHODS OF FUNCTION
 // .call()
+{
+    const userProfile = {
+        name: 'Zeke',
+        age: 29,
+        country: 'Canada'
+    }
+    const userSecondProfile = {
+        name: 'Rose',
+        age: 25,
+        country: 'Russia',
+        intro() {
+            return `${this.name} is ${this.age} years old and is from ${this.country}`
+        }
+            
+    }
+    function callProfile(a, b) {
+        console.log(a + b);
+        return this
+    }
+    console.log(callProfile.call(userProfile, 4, 5), userSecondProfile.intro.call(userProfile));
+}
+const thisObject1 = {
+    name: 'Alice',
+    age: 28,
+    greeting: function() {
+        return this
+    }
+}
 
+const thisObject2 = {
+    name: 'Alice Wonder',
+    age: 38,
+    city: 'New York',
+    info() {
+        return `${this.name} is ${this.age} years old and lives in ${this.city}`
+    }
+}
+const thisObject3 = {
+    name: 'Bob Ziroll',
+    age: 34,
+    city: 'Paris',
+}
+function myfunction1() {
+    return this
+}
+function myfunction2(a, b) {
+    console.log(a + b, this);
+}
+console.log(thisObject2.info(), myfunction1(), myfunction1.call(thisObject2));
+console.log(myfunction2(10, 3), myfunction2.call(thisObject1, 10, 30));
+console.log(myfunction3.call(thisObject, 10, 30, 40), myfunction3.apply(thisObject, [10, 300, 4]));
 
 // .apply()
+console.log(myfunction2.apply(thisObject1, [10, 300]));
 
 // .bind()
-const objectOne = {
+const objectOfValueTypes = {
     a: 10,
     b: 'null',
     c: NaN
@@ -99,9 +156,9 @@ function testFunc(a, b) {
     console.log(a + b);
     console.log(this);
 }
-const bindedFunc = testFunc.bind(objectOne, 10, 30)
-const bindedFunc1 = testFunc.bind(objectOne)
-const bindedFunc2 = testFunc.bind(objectOne, 70)
+const bindedFunc = testFunc.bind(objectOfValueTypes, 10, 30)
+const bindedFunc1 = testFunc.bind(objectOfValueTypes)
+const bindedFunc2 = testFunc.bind(objectOfValueTypes, 70)
 console.log(bindedFunc(), bindedFunc1(20, 50), bindedFunc2(25));
 
 

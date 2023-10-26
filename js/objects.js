@@ -31,3 +31,12 @@ const object1 = {
     c: 3,
 };
 console.log(Object.getOwnPropertyNames(object1));
+
+const thisObject = {
+    name: 'Alice',
+    age: 28,
+    greeting: function() {
+        return this
+    }
+}
+console.log(thisObject.greeting());
