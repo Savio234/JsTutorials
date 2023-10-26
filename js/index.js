@@ -13,6 +13,12 @@ for (let i = 0; i < navItemsLength; i++) {
     }
 }
 
+function mult(a, b) {
+    result = a * b
+    return result
+}
+console.log(mult(2, 5));
+
 // navItems.forEach(navItem => {
 //     navItem.addEventListener('click', function() {
 //         if (navItem.classList.contains('active')) {
@@ -70,9 +76,10 @@ function getOddNum() {
 }
 console.log(getOddNum());
 
-const sortedList = ages.sort((a, b) => b - a)
+const numbersArray = [21,12,17,7,2];
+const sortedList = numbersArray.sort((a, b) => b - a)
 console.log(sortedList);
-console.log(ages.some((person)=> person > 18))
+console.log(numbersArray.some((person)=> person > 18))
 
 
 const thisObject = {
@@ -84,7 +91,7 @@ const thisObject = {
 }
 console.log(thisObject.greeting());
 
-console.log(ages[3]);
+console.log(numbersArray[3]);
 
 function setBgRed() {
     document.body.style.backgroundColor = 'red'

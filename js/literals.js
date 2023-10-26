@@ -49,8 +49,8 @@ const anothObj = (make, year) => {
         }
     }
 }
-const newCar = anothObj('Tesla', 2022)
-console.log(newCar.purchase(55000));
+const aNewCar = anothObj('Tesla', 2022)
+console.log(aNewCar.purchase(55000));
 
 const photoGallery = (title, dimensions, date) => {
     return {

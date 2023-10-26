@@ -83,6 +83,27 @@ mult() //NaN cause since no arguments, parameters will be automatically 'undefin
 mult(5, 64, 'abc') //logs NaN multiplication of anything other than numbers results in NaN
 mult('abc', 'def', 'ghi');
 
+// METHODS OF FUNCTION
+// .call()
+// .apply()
+
+// .bind()
+const objectOne = {
+    a: 10,
+    b: 'null',
+    c: NaN
+}
+function testFunc(a, b) {
+    console.log(a + b);
+    console.log(this);
+}
+const bindedFunc = testFunc.bind(objectOne, 10, 30)
+const bindedFunc1 = testFunc.bind(objectOne)
+const bindedFunc2 = testFunc.bind(objectOne, 70)
+console.log(bindedFunc(), bindedFunc1(20, 50), bindedFunc2(25));
+
+
+
 // /* ANONYMOUS FUNCTIONS */
 // They are either used as callbacks or stored in a variable 
 // Because they cannot be used as standalone like the ideal functions
