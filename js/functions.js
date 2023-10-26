@@ -85,6 +85,8 @@ mult('abc', 'def', 'ghi');
 
 // METHODS OF FUNCTION
 // .call()
+
+
 // .apply()
 
 // .bind()
