@@ -141,7 +141,7 @@ function myfunction2(a, b) {
 }
 console.log(thisObject2.info(), myfunction1(), myfunction1.call(thisObject2));
 console.log(myfunction2(10, 3), myfunction2.call(thisObject1, 10, 30));
-console.log(myfunction3.call(thisObject, 10, 30, 40), myfunction3.apply(thisObject, [10, 300, 4]));
+console.log(myfunction3.call(thisObject1, 10, 30, 40), myfunction3.apply(thisObject1, [10, 300, 4]));
 
 // .apply()
 console.log(myfunction2.apply(thisObject1, [10, 300]));
@@ -217,3 +217,6 @@ a => a * a;
 }
 
 // ARROW FUNCTIONS PRACTICE
+// ANONYMOUS ARROW FUNCTIONS
+const getSum = (a, b) => a + b
+console.log(getSum(5, 55));
