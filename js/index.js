@@ -89,3 +89,9 @@ function myfunction3(a, b, c) {
 
     return sum
 }
+function insertNewScript(type) {
+    const newEl = document.createElement('script')
+    newEl.src = `js/${type}.js`
+    document.body.appendChild(newEl)
+}
+insertNewScript('newScript')
