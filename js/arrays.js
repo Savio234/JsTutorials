@@ -29,6 +29,10 @@ console.log(carList)
 
 // .forEach()
 const myCities = ['London', 'New York', 'Singapore', 'Rome', 'Paris']
+const mappedCities = myCities.map(mappedCity => {
+    return `<div>${mappedCity}</div>`
+})
+console.log(mappedCities);
 
 const citiesInfo = (city, index) => `${city} is located at the index ${index} of myCities array`
 myCities.forEach((city, index) => 
