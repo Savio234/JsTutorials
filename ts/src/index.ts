@@ -48,23 +48,23 @@ console.log(Direction1.Right);
 type User = {
     id: number,
     name: string,
-    classStatus: boolean
+    readonly GOATStatus: boolean
 }
 const user: User[] = [
     {
         id: 1,
         name: 'Jordan',
-        classStatus: true
+        GOATStatus: true
     },
     {
         id: 2,
         name: 'LBJ',
-        classStatus: true
+        GOATStatus: true
     },
     {
         id: 3,
         name: 'K. Brown',
-        classStatus: false
+        GOATStatus: false
     }
 ]
 
@@ -73,6 +73,7 @@ const cId: any = 1
 // const customerId = <number>cId
 const customerId = cId as number
 // Both ways work
+
 
 // FUNCTIONS
 function addNum(x: number, y: number) {
@@ -89,13 +90,15 @@ console.log(logs('90 is a number'));
 // INTERFACES (Can't be used with unions)
 interface Users {
     id: number,
-    name: string
+    name: string,
+    age?: number
 }
 
-const users: Users[] = [
+const multipleUsers: Users[] = [
     {
         id: 1,
-        name: 'Karl Malone'
+        name: 'Karl Malone',
+        age: 50
     },
     {
         id: 2,
@@ -107,7 +110,22 @@ const singleUser: Users = {
     id: 22,
     name: 'Stallone Sylvester'
 }
-console.log('Multiple users', users, 'Single user', singleUser);
+console.log('Multiple users', multipleUsers, 'Single user', singleUser);
+
+interface MathFunc {
+    (m: number,
+    n: number): number
+}
+
+const product: MathFunc = (m, n) => m * n
+const divide: MathFunc = (m, n) => m / n
+const subtract: MathFunc = (m, n) => m - n
+console.log(
+    'Product', product(20, 3),
+    'Division', Math.floor(divide(20, 3)),
+    'Diff', subtract(20, 3)
+);
+
 
 
 

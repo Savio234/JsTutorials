@@ -42,17 +42,17 @@ const user = [
     {
         id: 1,
         name: 'Jordan',
-        classStatus: true
+        GOATStatus: true
     },
     {
         id: 2,
         name: 'LBJ',
-        classStatus: true
+        GOATStatus: true
     },
     {
         id: 3,
         name: 'K. Brown',
-        classStatus: false
+        GOATStatus: false
     }
 ];
 // TYPE ASSERTION
@@ -70,10 +70,11 @@ function logs(message) {
     return message;
 }
 console.log(logs('90 is a number'));
-const users = [
+const multipleUsers = [
     {
         id: 1,
-        name: 'Karl Malone'
+        name: 'Karl Malone',
+        age: 50
     },
     {
         id: 2,
@@ -84,4 +85,8 @@ const singleUser = {
     id: 22,
     name: 'Stallone Sylvester'
 };
-console.log('Multiple users', users, 'Single user', singleUser);
+console.log('Multiple users', multipleUsers, 'Single user', singleUser);
+const product = (m, n) => m * n;
+const divide = (m, n) => m / n;
+const subtract = (m, n) => m - n;
+console.log('Product', product(20, 3), 'Division', Math.floor(divide(20, 3)), 'Diff', subtract(20, 3));
