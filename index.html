@@ -41,6 +41,30 @@
       border-right: 0.1rem solid #EA445A;
       padding: 0.5rem 1rem;
     }
+    .counterContainer {
+      display: flex;
+      align-items: center;
+      gap: 2rem;
+      margin-bottom: 3rem;
+    }
+    .incrementBtn, .decrementBtn {
+      width: 3rem;
+      height: 3rem;
+      border-radius: 0.8rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border: 0.1rem solid #06060B;
+      cursor: pointer;
+    }
+    .counterContainer h3 {
+      font-size: 2rem;
+      line-height: 3rem;
+    }
+    .counterContainer p, .counterValue {
+      font-size: 3.2rem;
+    }
+
    </style>
 
    <body>
@@ -144,6 +168,12 @@
         </button>
       </div>
 
+      <div class="counterContainer">
+        <div class="decrementBtn"><h3>-</h3></div>
+        <div class="counterValue"><p>0</p></div>
+        <div class="incrementBtn"><h3>+</h3></div>
+      </div>
+
 
     </div>
 
@@ -157,6 +187,7 @@
    <script src="./js/babel.js"></script>
    <script src="./js/classes.js"></script>
    <script src="./js/constructors.js"></script>
+   <script src="./js/counter.js"></script>
    <script src="./js/destructuring.js"></script>
    <script src="./js/functions.js"></script>
    <script src="./js/literals.js"></script>
