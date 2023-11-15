@@ -12,4 +12,5 @@ minus.addEventListener('click', decrementValue => {
     value -= 1
     displayValue.textContent = value
 })
-console.log(add, minus);
+console.log(add.innerText, minus);
+console.dir(add)
