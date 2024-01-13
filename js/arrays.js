@@ -95,9 +95,16 @@ const allPassed = numbers.every(function(element){
 console.log(allPassed);
 
 // .map()
-const arrayToMap = [1, 5, 7]
+const arrayToMap = [1, 5, 7, 4, 9]
 let squaredNums = []
 let squaredNums2 = []
+let cubedNums = []
 arrayToMap.map(elem => squaredNums.push(elem * elem))
+
 arrayToMap.map(elem => squaredNums2.push(Math.pow(elem, 3)))
 console.log('Array of squared numbers = ',squaredNums, 'Array of cubed numbers = ', squaredNums2);
+
+// In a situation where the exponent isn't specified in the Math.pow() function, 
+// the index of the number in that array serves as the exponent. E.g
+arrayToMap.map((elem, index) => cubedNums.push(Math.pow(elem, index)))
+console.log('Cubed Numbers', cubedNums);
