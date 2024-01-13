@@ -93,3 +93,9 @@ const allPassed = numbers.every(function(element){
 	return element > 0;
 });
 console.log(allPassed);
+
+// .map()
+const arrayToMap = [1, 5, 7]
+let squaredNums = []
+arrayToMap.map(elem => squaredNums.push(elem * elem))
+console.log(squaredNums);
