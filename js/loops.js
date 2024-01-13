@@ -1,7 +1,7 @@
 "use strict";
 // FOR LOOPS
 const smallArray = ["first", "second", "third", "Draxler", "Vitinha"];
-const smallNums = [ , 5, 7]
+const smallNums = [1, 5, 7]
 for (let i = 0; i < smallArray.length; i++) {
     // i is initially assigned zero because index of the first element in an array is zero
     console.log(smallArray[i]);
