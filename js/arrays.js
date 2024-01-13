@@ -97,5 +97,7 @@ console.log(allPassed);
 // .map()
 const arrayToMap = [1, 5, 7]
 let squaredNums = []
+let squaredNums2 = []
 arrayToMap.map(elem => squaredNums.push(elem * elem))
-console.log(squaredNums);
+arrayToMap.map(elem => squaredNums2.push(Math.pow(elem, 3)))
+console.log('Array of squared numbers = ',squaredNums, 'Array of cubed numbers = ', squaredNums2);
