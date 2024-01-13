@@ -95,3 +95,20 @@ function insertNewScript(type) {
     document.body.appendChild(newEl)
 }
 insertNewScript('newScript')
+
+const postJSON = [
+    '{"postID": 1355, "commentsQuantity": 5}',
+    '{"postID": 5131, "commentsQuantity": 13}',
+    '{"postID": 6134, "commentsQuantity": 2}'
+]
+let posts = []
+for (let i = 0; i < postJSON.length; i++) {
+    posts.push(JSON.parse(postJSON[i]))
+}
+console.log(posts);
+
+let postsArray = []
+postsArray = postJSON.map(post => JSON.parse(post))
+console.log(postsArray);
+const singlePost = postsArray.map(eachPost => `In each object, there is a postID of ${eachPost.postID} and a total comments of ${eachPost.commentsQuantity}`)
+console.log(singlePost);
