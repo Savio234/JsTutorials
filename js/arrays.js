@@ -106,5 +106,5 @@ console.log('Array of squared numbers = ',squaredNums, 'Array of cubed numbers =
 
 // In a situation where the exponent isn't specified in the Math.pow() function, 
 // the index of the number in that array serves as the exponent. E.g
-arrayToMap.map((elem, index) => cubedNums.push(Math.pow(elem, index)))
+cubedNums = arrayToMap.map(Math.pow)
 console.log('Cubed Numbers', cubedNums);
