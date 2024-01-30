@@ -43,6 +43,9 @@ myCities.forEach((city, index) =>
 const words = ['spray', 'limit', 'elite', 'exuberant', 'destruction', 'present'];
 const results = words.filter(word => word.length < 6);
 console.log(results);
+const singleWord = 'A big fucking spray'
+const filteredWord = singleWord.replace(' fucking', '')
+console.log(filteredWord);
 
 // .includes()
 const str = 'To be, or not to be, that is the question.' 
