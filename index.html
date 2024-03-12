@@ -76,64 +76,6 @@
       <span class="nav-link ">Register</span>
       <span class="nav-link ">Login</span>
     </nav>
-    <p>
-      <!-- // useEffect(() => {
-         //   getConnectedWallet()
-         //   walletListener()
-         // })
-         // const connectwallet = async() => {
-         //   if(typeof window != "undefined" && typeof window.ethereum != "undefined") {
-         //     try {
-         //       // Check if metamask was installed
-         //       const accounts = await window.ethereum.request({ method: "eth_requestAccounts" });
-         //       setWalletAddress(accounts[0])
-         //       console.log(accounts[0]);
-         //     } catch(err) {
-         //       console.error(err.message)
-         //     }
-         //   } else {
-         //     // Metamask is not installed
-         //     console.log("Please install Metamask")
-         //   }
-         // }
-       
-         // // To stay connected on refresh
-         // const getConnectedWallet = async() => {
-         //   if(typeof window != "undefined" && typeof window.ethereum != "undefined") {
-         //     try {
-         //       // Check if metamask was installed
-         //       const accounts = await window.ethereum.request({
-         //         method: "eth_accounts"
-         //       });
-         //       if (accounts.length > 0) {
-         //         setWalletAddress(accounts[0])
-         //         console.log(accounts[0]);
-         //       } else {
-         //         console.log("Please connect to metamask")
-         //       }
-         //     } catch(err) {
-         //       console.error(err.message)
-         //     }
-         //   } else {
-         //     // Metamask is not installed
-         //     console.log("Please install Metamask")
-         //   }
-         // }
-       
-         // // To visibly disconnect when disconnected
-         // const walletListener = async() => {
-         //   if(typeof window != "undefined" && typeof window.ethereum != "undefined") {
-         //    window.ethereum.on("accountsChanged", (accounts) => {
-         //     setWalletAddress(accounts[0]);
-         //     console.log(accounts[0])
-         //    });
-         //   } else {
-         //     // Metamask is not installed
-         //     setWalletAddress(" ");
-         //     console.log("Please install Metamask")
-         //   }
-         // }; -->
-    </p>
 
     <div>
       <div style="margin-bottom: 3rem;">
@@ -198,5 +140,6 @@
    <script src="./js/types.js"></script>
    <script src="./js/variableLifeCycles.js"></script>
    <script src="./js/variables.js"></script>
+   <script src="./redux/index.js"></script>
    </html>
    
